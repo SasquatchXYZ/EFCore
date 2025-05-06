@@ -7,8 +7,9 @@ public class AppDbContext : DbContext
 {
     private const string ConnectionString =
         @"Server=localhost\SQLEXPRESS;
-            Database=master;
-            Trusted_Connection=True";
+            Database=FirstEfCoreApp;
+            Trusted_Connection=True;
+            TrustServerCertificate=True;";
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
