@@ -9,7 +9,7 @@ public class Book
     public string Publisher { get; set; }
     public decimal Price { get; set; }
     public string ImageUrl { get; set; }
-    // public bool SoftDeleted { get; set; }
+    public bool SoftDeleted { get; set; }
 
     // Relationships
     public PriceOffer? Promotion { get; set; }
