@@ -27,10 +27,10 @@ public class EfCoreContext : DbContext
         //     .HasOne(p => p.ChosenBook)
         //     .WithMany()
         //     .OnDelete(DeleteBehavior.Restrict);
-        //
-        // modelBuilder.Entity<Book>()
-        //     .HasQueryFilter(p => !p.SoftDeleted);
-        //
+
+        modelBuilder.Entity<Book>()
+            .HasQueryFilter(p => !p.SoftDeleted);
+
         // modelBuilder.Entity<Order>()
         //     .HasQueryFilter(x => x.CustomerId == _userId);
     }
