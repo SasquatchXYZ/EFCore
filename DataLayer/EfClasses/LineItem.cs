@@ -24,7 +24,7 @@ public class LineItem : IValidatableObject
             yield return new ValidationResult($"Sorry, the book '{ChosenBook.Title}' is not for sale.");
 
         if (NumBooks > 100)
-            yield return new ValidationResult("If you want t order 100 or more books please phone us on 01234-5678-90", new[]
+            yield return new ValidationResult("If you want to order 100 or more books please phone us on 01234-5678-90", new[]
             {
                 nameof(NumBooks)
             });
