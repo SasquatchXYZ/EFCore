@@ -8,7 +8,7 @@ namespace BusinessLogic.Orders.Concrete;
 
 public class PlaceOrderAction :
     BusinessActionErrors,
-    IBusinessAction<PlaceOrderInDto, Order>
+    IBusinessAction<PlaceOrderInDto, Order?>
 {
     private readonly IPlaceOrderDbAccess _dbAccess;
 
