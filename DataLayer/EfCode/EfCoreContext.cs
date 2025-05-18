@@ -7,8 +7,9 @@ public class EfCoreContext : DbContext
 {
     public DbSet<Book> Books { get; set; }
     public DbSet<Author> Authors { get; set; }
-    public DbSet<Tag> Tags { get; set; }
     public DbSet<PriceOffer> PriceOffers { get; set; }
+    public DbSet<Tag> Tags { get; set; }
+    public DbSet<Order> Orders { get; set; }
 
     public EfCoreContext(DbContextOptions<EfCoreContext> options) : base(options)
     {
@@ -32,6 +33,6 @@ public class EfCoreContext : DbContext
             .HasQueryFilter(p => !p.SoftDeleted);
 
         // modelBuilder.Entity<Order>()
-        //     .HasQueryFilter(x => x.CustomerId == _userId);
+        // .HasQueryFilter(x => x.CustomerId == _userId);
     }
 }
